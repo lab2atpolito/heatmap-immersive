@@ -14,30 +14,35 @@ public class VideoManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        slider.maxValue =(float) videoPlayer.clip.frameCount/25;
+        slider.maxValue = (float)videoPlayer.clip.frameCount / 25;
         time.text = FormatTime(slider.value);
         slider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
         videoPlayer.Pause();
-        
+
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        
-        
+        if (Input.GetKeyDown(KeyCode.S)){
+            string nameScreenshot = videoPlayer.clip.name;
+            ScreenCapture.CaptureScreenshot(nameScreenshot, 2);
+        }
+
     }
 
     public void ValueChangeCheck()
     {
         time.text = FormatTime(slider.value);
         videoPlayer.Play();
-        videoPlayer.frame = (long) slider.value * 25;
+        videoPlayer.frame = (long)slider.value * 25;
         videoPlayer.Pause();
-        
-        
+
+
     }
+
+
 
     public string FormatTime(float time)
     {
@@ -49,4 +54,6 @@ public class VideoManager : MonoBehaviour
                         t.Seconds);
         return answer;
     }
+
+
 }

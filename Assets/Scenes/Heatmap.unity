@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tracking: 1
-  dataPath: D:\Unity Projects\Immersive_Movies\Assets\EyeData\Persone_External\Test2\CustomEvents.csv
+  dataPath: C:\Users\User\Desktop\Eye Data 1\CustomEvents.csv
   instantTime: 0
   windowLength: 20
   frameRate: 25
@@ -919,7 +919,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.04, z: -1.26}
+  m_LocalPosition: {x: 0, y: -0.04, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -950,7 +950,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978727120}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: f0e1cb61c13bd0943b06a22f5c76f405, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 1c2d82b60e7fe1742adf9099deb15631, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1223,7 +1223,6 @@ GameObject:
   - component: {fileID: 1237722162}
   - component: {fileID: 1237722161}
   - component: {fileID: 1237722160}
-  - component: {fileID: 1237722164}
   m_Layer: 5
   m_Name: GUI
   m_TagString: Untagged
@@ -1314,21 +1313,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1237722164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1237722159}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deef9c6e4189db04bbfe346918c482c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 573402715}
-  videoPlayer: {fileID: 978727121}
-  time: {fileID: 1177564708}
 --- !u!1 &1322164522
 GameObject:
   m_ObjectHideFlags: 0

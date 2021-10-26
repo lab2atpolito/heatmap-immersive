@@ -164,7 +164,7 @@ public class QuadScript : MonoBehaviour
                 var values = line.Split(';');
                 float timestamp = (float)float.Parse(values[1]);
                 float tStart;
-                string dataType = "Planar_" + Tracking.ToString() + "_Point";
+                string dataType = " Planar_" + Tracking.ToString() + "_Point";
 
                 if ((instantTime - windowLength) < 0)
                 {
@@ -175,7 +175,7 @@ public class QuadScript : MonoBehaviour
                     tStart = instantTime - windowLength;
                 }
 
-                if (timestamp >= tStart && timestamp <= instantTime) //&& values[2].Equals(dataType)
+                if (timestamp >= tStart && timestamp <= instantTime && values[2].Equals(dataType))
                 {
                     float x = float.Parse(values[3]);
                     float y = float.Parse(values[4]);
