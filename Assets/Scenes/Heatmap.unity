@@ -234,8 +234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431b19afb9923ac449560c84cd525e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tracking: 1
-  dataPath: C:\Users\User\Desktop\Eye Data 1\CustomEvents.csv
+  Tracking: 0
+  dataPath: Assets/CustomEvents.csv
   instantTime: 0
   windowLength: 20
   frameRate: 25

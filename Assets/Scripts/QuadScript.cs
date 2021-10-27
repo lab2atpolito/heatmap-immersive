@@ -157,30 +157,35 @@ public class QuadScript : MonoBehaviour
             if (line.Equals(headerLine))
             {
 
-                break;
+                continue;
             }
             else
             {
                 var values = line.Split(';');
-                float timestamp = (float)float.Parse(values[1]);
-                float tStart;
-                string dataType = " Planar_" + Tracking.ToString() + "_Point";
+                if (values.Count() > 1)
+                {
+                    float timestamp = (float)float.Parse(values[1]);
+                    float tStart;
+                    string dataType = " Planar_" + Tracking.ToString() + "_Point";
 
-                if ((instantTime - windowLength) < 0)
-                {
-                    tStart = 0;
-                }
-                else
-                {
-                    tStart = instantTime - windowLength;
-                }
+                    if ((instantTime - windowLength) < 0)
+                    {
+                        tStart = 0;
+                    }
+                    else
+                    {
+                        tStart = instantTime - windowLength;
+                    }
 
-                if (timestamp >= tStart && timestamp <= instantTime && values[2].Equals(dataType))
-                {
-                    float x = float.Parse(values[3]);
-                    float y = float.Parse(values[4]);
-                    Newcoordinates.Add(new Vector2(x, y));
+                    if (timestamp >= tStart && timestamp <= instantTime && values[2].Equals(dataType))
+                    {
+                        float x = float.Parse(values[3]);
+                        float y = float.Parse(values[4]);
+                        Newcoordinates.Add(new Vector2(x, y));
+                    }
+
                 }
+                
             }
 
 
