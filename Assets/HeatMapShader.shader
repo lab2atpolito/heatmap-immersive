@@ -161,7 +161,7 @@
                   float2 work_pt = float2(_Hits[i * 2], _Hits[i * 2 + 1]);
                   float pt_intensity = _Intensities[i] / _TotalHits;
 
-                  totalWeight += pt_intensity * distsq(uv, work_pt); //*0.5 * _Strength * (1 + sin(_Time.y * _PulseSpeed));
+                  totalWeight += pt_intensity * distsq(uv, work_pt) * _Strength; //*0.5  * (1 + sin(_Time.y * _PulseSpeed));
               }
          
        
