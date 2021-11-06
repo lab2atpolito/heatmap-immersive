@@ -26,7 +26,7 @@ public class VideoManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.S)){
-            string nameScreenshot = videoPlayer.clip.name;
+            string nameScreenshot = videoPlayer.clip.name+ ".png";
             ScreenCapture.CaptureScreenshot(nameScreenshot, 2);
         }
 
