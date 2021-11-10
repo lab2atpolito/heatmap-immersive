@@ -235,9 +235,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tracking: 1
-  dataPath: C:\Users\User\Documents\T-Immersive-Movies\t-immersive-movies-pov\Data\Oreste_External\oreste_external_gaze.csv
+  dataPath: C:\Users\User\Documents\T-Immersive-Movies\t-immersive-movies-pov\Data\Oreste_1PP\gaze_data_oreste_1pp.csv
   instantTime: 0
-  windowLength: 20
+  windowLength: 2
   frameRate: 25
   videoPlayer: {fileID: 978727121}
   timeSlider: {fileID: 573402715}
@@ -950,7 +950,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978727120}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 1c2d82b60e7fe1742adf9099deb15631, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 32572c9201778524c958a0b48b9d3a70, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -971,7 +971,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 1
@@ -1107,7 +1107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.8867924, b: 0.010776474, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1166,8 +1166,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 100, y: 50}
-  m_SizeDelta: {x: 160, y: 60}
+  m_AnchoredPosition: {x: 101.18, y: 67.5}
+  m_SizeDelta: {x: 162.36945, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1177564708
 MonoBehaviour:

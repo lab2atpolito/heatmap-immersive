@@ -82,7 +82,7 @@ public class QuadScript : MonoBehaviour
 
     void Update()
     {
-        instantTime = timeSlider.value;
+        instantTime = (float) videoPlayer.time;
         
 
         if (instantTime != previousTime || windowLength!=previousWindowLength)

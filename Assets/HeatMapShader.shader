@@ -16,8 +16,9 @@
       _Range4("Range 4",Range(0,1)) = 1
 
       _Diameter("Diameter",Range(0,1)) = 1.0
-      _Strength("Strength",Range(.1,4)) = 1.0
+      _Strength("Strength",Range(.1,100)) = 1.0
       _PulseSpeed("Pulse Speed",Range(0,5)) = 0
+      _NumberOfUsers("Number of users", Range(1,100))=15
   }
     SubShader
     {
@@ -65,6 +66,7 @@
         float _Strength;
 
         float _PulseSpeed;
+        float _NumberOfUsers;
 
         v2f vert(appdata v)
         {
@@ -159,7 +161,7 @@
               for (float i = 0.0; i < _HitCount; i++)
               {
                   float2 work_pt = float2(_Hits[i * 2], _Hits[i * 2 + 1]);
-                  float pt_intensity = _Intensities[i] / _TotalHits;
+                  float pt_intensity = _Intensities[i] / (_TotalHits/_NumberOfUsers);
 
                   totalWeight += pt_intensity * distsq(uv, work_pt) * _Strength; //*0.5  * (1 + sin(_Time.y * _PulseSpeed));
               }

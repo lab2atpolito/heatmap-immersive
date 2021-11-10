@@ -17,7 +17,7 @@ public class VideoManager : MonoBehaviour
         slider.maxValue = (float)videoPlayer.clip.frameCount / 25;
         time.text = FormatTime(slider.value);
         slider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
-        videoPlayer.Pause();
+        //videoPlayer.Pause();
 
     }
 
@@ -25,6 +25,7 @@ public class VideoManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.S)){
             string nameScreenshot = videoPlayer.clip.name+ ".png";
             ScreenCapture.CaptureScreenshot(nameScreenshot, 2);
@@ -35,9 +36,9 @@ public class VideoManager : MonoBehaviour
     public void ValueChangeCheck()
     {
         time.text = FormatTime(slider.value);
-        videoPlayer.Play();
+        //videoPlayer.Play();
         videoPlayer.frame = (long)slider.value * 25;
-        videoPlayer.Pause();
+        //videoPlayer.Pause();
 
 
     }
