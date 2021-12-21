@@ -59,26 +59,26 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _Diameter: 0.25
+    - _Diameter: 0.075
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _NumberOfUsers: 15
+    - _NumberOfUsers: 16
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _PulseSpeed: 0
     - _Range0: 0
-    - _Range1: 0.25
-    - _Range2: 0.5
-    - _Range3: 0.75
+    - _Range1: 0.4
+    - _Range2: 0.6
+    - _Range3: 0.8
     - _Range4: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Strength: 1
+    - _Strength: 50
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:

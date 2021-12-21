@@ -36,9 +36,9 @@ public class VideoManager : MonoBehaviour
     public void ValueChangeCheck()
     {
         time.text = FormatTime(slider.value);
-        //videoPlayer.Play();
+        videoPlayer.Play();
         videoPlayer.frame = (long)slider.value * 25;
-        //videoPlayer.Pause();
+        videoPlayer.Pause();
 
 
     }

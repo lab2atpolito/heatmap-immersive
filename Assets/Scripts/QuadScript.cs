@@ -40,16 +40,22 @@ public class QuadScript : MonoBehaviour
     float previousTime;
     float previousWindowLength;
 
-   
+    float frameCount;
+
+    string path;
 
 
 
 
 
+    private void Awake()
+    {
+        Application.targetFrameRate = (int) frameRate;
+    }
 
 
 
-    void Start()
+        void Start()
     {
 
         mPoints = new float[1022];
@@ -69,23 +75,26 @@ public class QuadScript : MonoBehaviour
 
         window.onEndEdit.AddListener(delegate { ValueChangeCheck(); });
 
+        path = Application.dataPath + "/"+ videoPlayer.clip.name;
 
-
-
-
-
-
-
+        videoPlayer.Play();
 
 
     }
 
+
     void Update()
     {
+        if (videoPlayer.frame != -1)
+        {
+            videoPlayer.Pause();
+        }
+        
+        
         instantTime = (float) videoPlayer.time;
         
 
-        if (instantTime != previousTime || windowLength!=previousWindowLength)
+        if (instantTime != previousTime || windowLength!= previousWindowLength && instantTime <= (videoPlayer.length-4f))
         {
             mHitCount = 0;
             coor = GetCoordinates();
@@ -94,9 +103,12 @@ public class QuadScript : MonoBehaviour
             generateHeatMap(CoordinateCount);
             previousTime = instantTime;
             previousWindowLength = windowLength;
+            takeScreenshot(videoPlayer.frame);
+            
+            
         }
 
-
+        videoPlayer.StepForward();
 
 
     }
@@ -255,6 +267,12 @@ public class QuadScript : MonoBehaviour
         {
             windowLength = videoPlayer.frameCount * 25;
         }
+    }
+
+    public void takeScreenshot(long frame)
+    {
+        string nameScreenshot = path + "/" + frame.ToString() + ".png";
+        ScreenCapture.CaptureScreenshot(nameScreenshot, 2);
     }
 
 
