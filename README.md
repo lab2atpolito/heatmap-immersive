@@ -20,3 +20,11 @@ SubjectID; Time; Name; X-Position; Y-Position
 -1; 0,06; Planar_Gaze_Point; 2531; 1381;
 
 Il campo Name differenzia i dati relativi al tracciamento degli occhi "Planar_Eye_Point" e quelli relativi all'orientamento della testa "Planar_Gaze_Point". Per scegliere l'uno o l'altro bisogna scegliere il valore della variabile Tracking nello script QuadScript assegnato a Target. X e Y Position sono le coordinate in pixel del punto registrato.
+
+All'oggetto Target vi è assegnato un materiale "Video Material", da qui è possibile regolare diversi parametri che variano l'aspetto dell'heatmap:
+- I colori utilizzati per disegnare l'heatmap: di default gli "hot-points" sono colorati in rosso, a seguire arancione, giallo e verde.
+- Range: i valori di intensità (percentuali) a cui corrispondono i diversi colori.
+- Diametro: aumentando questo valore aumenta la dimensione minima di ogni punto disegnato.
+- Numero di utenti: il calcolo del colore di ogni pixel dipende dal numero di utenti da cui si sono prelevati i dati.
+![image](https://user-images.githubusercontent.com/75683448/150297398-4bc7478b-c266-4376-be9c-1bb34aa99574.png)
+
